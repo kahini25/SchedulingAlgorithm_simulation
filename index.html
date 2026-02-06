@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Scheduling Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>CPU Scheduling Simulator</h1>
+            <p>Visualize how distinct algorithms manage process execution.</p>
+        </header>
+
+        <div class="main-layout">
+            <!-- Sidebar: Controls -->
+            <aside class="controls-panel">
+                <div class="card">
+                    <h2>Add Process</h2>
+                    <div class="input-group">
+                        <label for="arrivalTime">Arrival Time</label>
+                        <input type="number" id="arrivalTime" min="0" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label for="burstTime">Burst Time</label>
+                        <input type="number" id="burstTime" min="1" value="1">
+                    </div>
+                    <div class="input-group">
+                        <label for="priority">Priority (Lower # = Higher)</label>
+                        <input type="number" id="priority" min="1" value="1">
+                    </div>
+                    <button id="addProcessBtn" class="btn primary-btn">Add Process</button>
+                </div>
+
+                <div class="card">
+                    <h2>Configuration</h2>
+                    <div class="input-group">
+                        <label for="algorithmSelect">Algorithm</label>
+                        <select id="algorithmSelect">
+                            <option value="FCFS">First Come First Serve (FCFS)</option>
+                            <option value="SJF">Shortest Job First (Non-Preemptive)</option>
+                            <option value="Priority">Priority (Non-Preemptive)</option>
+                            <option value="RR">Round Robin</option>
+                        </select>
+                    </div>
+                    <div class="input-group" id="quantumGroup" style="display: none;">
+                        <label for="timeQuantum">Time Quantum</label>
+                        <input type="number" id="timeQuantum" min="1" value="2">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="speedSlider">Simulation Speed</label>
+                        <input type="range" id="speedSlider" min="1" max="10" value="5">
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="runBtn" class="btn success-btn">Run Simulation</button>
+                        <button id="resetBtn" class="btn danger-btn">Reset</button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content: Tables and Charts -->
+            <main class="visualization-panel">
+                <div class="card" id="processListCard">
+                    <h3>Process Queue</h3>
+                    <div class="table-container">
+                        <table id="inputTable">
+                            <thead>
+                                <tr>
+                                    <th>PID</th>
+                                    <th>Arrival Time</th>
+                                    <th>Burst Time</th>
+                                    <th>Priority</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Rows will be added here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card results-section" style="opacity: 0.5; pointer-events: none;"> <!-- Dimmed until run -->
+                    <h3>Gantt Chart</h3>
+                    <div id="ganttChart" class="gantt-chart">
+                        <!-- Bars will be inserted here -->
+                        <div class="placeholder-text">Run simulation to view Gantt Chart</div>
+                    </div>
+
+                    <h3>Results</h3>
+                    <div class="table-container">
+                        <table id="outputTable">
+                            <thead>
+                                <tr>
+                                    <th>PID</th>
+                                    <th>Completion</th>
+                                    <th>Turnaround</th>
+                                    <th>Waiting</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="metrics">
+                        <div class="metric-box">
+                            <span>Avg Turnaround Time</span>
+                            <span id="avgTurnaround">0.00</span>
+                        </div>
+                        <div class="metric-box">
+                            <span>Avg Waiting Time</span>
+                            <span id="avgWaiting">0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
