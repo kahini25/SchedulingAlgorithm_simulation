@@ -69,4 +69,18 @@ Overall, the simulator bridges the gap between theoretical knowledge and practic
 ---
 
 ## Project Structure
+The project follows a modular and maintainable directory organization to clearly separate user interface components, core scheduling logic, routing structure, and static assets.
+
+```
+cpu_scheduler/
+├── src/
+│   ├── components/   # Reusable UI components such as ProcessTable and GanttChart
+│   ├── lib/          # Implementation of CPU scheduling algorithms and utilities
+│   ├── pages/        # Route-level views and application screens
+│   └── index.css     # Global styles and Tailwind CSS configuration
+├── public/           # Static assets including icons and images
+└── index.html        # Application entry HTML file
+```
+
+This structure improves readability, scalability, and ease of maintenance by ensuring a clear separation between presentation, logic, and configuration layers within the application.
 
