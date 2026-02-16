@@ -1,73 +1,72 @@
-# Welcome to your Lovable project
+# CPU Scheduling Simulator
 
-## Project info
+The CPU Scheduling Simulator is an interactive web-based application designed to visualize and analyze classical operating system scheduling algorithms in real time. Built using modern frontend technologies such as React, TypeScript, and Vite, the simulator enables users to define processes, configure scheduling parameters, and observe execution behavior through dynamic Gantt chart representations and computed performance metrics.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This project serves as an educational and demonstrative tool that bridges theoretical concepts of CPU scheduling with practical, visual understanding. It is particularly useful for students studying operating systems, educators illustrating scheduling strategies, and developers exploring algorithm visualization within a scalable, component-driven frontend architecture.
 
-## How can I edit this code?
 
-There are several ways of editing your application.
+## Key Features
 
-**Use Lovable**
+- Implementation and simulation of fundamental CPU scheduling algorithms:
+  - First Come First Serve (FCFS)
+  - Shortest Job First (SJF)
+  - Priority Scheduling
+  - Round Robin (RR)
+- Interactive interface for process definition and parameter configuration  
+- Dynamic Gantt chart–based execution visualization  
+- Automatic computation of essential scheduling metrics:
+  - Waiting Time
+  - Turnaround Time
+  - Response Time
+  - CPU Utilization
+- Fully responsive layout with dark mode support  
+- Maintainable and modular architecture built using React and TypeScript  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## Project Objective
 
-**Use your preferred IDE**
+The primary objective of this project is to provide a clear and interactive platform for understanding Operating System CPU scheduling strategies.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+It is particularly useful for:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Students, to strengthen conceptual clarity through visualization  
+- Educators, to demonstrate scheduling behavior in an intuitive format  
+- Developers, to explore modern frontend architecture combined with algorithmic simulation  
 
-Follow these steps:
+Overall, the simulator bridges the gap between theoretical knowledge and practical visualization.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Technology Stack
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Frontend Framework
+- React 18  
+- TypeScript  
+- Vite  
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### UI and Styling
+- Tailwind CSS  
+- Shadcn UI (built on Radix UI primitives)  
+- Lucide React icon library  
+- Inter and JetBrains Mono fonts  
 
-**Edit a file directly in GitHub**
+### State Management, Forms, and Routing
+- React Router DOM  
+- TanStack Query  
+- React Hook Form with Zod validation  
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Data Visualization and User Experience
+- Recharts for Gantt chart rendering  
+- Sonner for toast notifications  
+- Next Themes for dark mode support  
 
-**Use GitHub Codespaces**
+### Development and Testing Tools
+- ESLint with TypeScript ESLint rules  
+- Vitest and React Testing Library with JSDOM  
+- SWC compiler integrated through Vite  
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## Project Structure
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
