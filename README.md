@@ -11,6 +11,7 @@ This project serves as an educational and demonstrative tool that bridges theore
   - First Come First Serve (FCFS)
   - Shortest Job First (SJF)
   - Priority Scheduling
+  - Shortest Remaining Time First (SRTF)
   - Round Robin (RR)
 - Interactive interface for process definition and parameter configuration  
 - Dynamic Gantt chart–based execution visualization  
